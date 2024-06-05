@@ -1,0 +1,28 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<h1>Peencha as lacunas a baixo.</h1>
+
+<form action="{{ url_for('criar_termo')}}" method="post">
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input  class="form-control" id="termo" name="nome" aria-describedby="emailHelp">
+    <div id="termoHelp" class="form-text">Coloque seu nome e sobrenome aqui</div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input  class="form-control" id="email" name="email" aria-describedby="emailHelp">
+    <div id="termoHelp" class="form-text">Coloque um e-mail para contato aqui</div>
+  </div>
+  <label for="numero" class="form-label">Número</label>
+    <input  class="form-control" id="termo" name="numero" aria-describedby="emailHelp">
+    <div id="termoHelp" class="form-text">Coloque seu número aqui</div>
+  </div>
+  <div class="mb-3">
+    <label for="definicao" class="form-label">Fale sobre você.</label>
+    <textarea class="form-control" id="definicao" name="definicao" rows="3"></textarea>
+    <div id="termoHelp" class="form-text">Por que você deve trabalhar para Gold Barber?</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+{% endblock %}
